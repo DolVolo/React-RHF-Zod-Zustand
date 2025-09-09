@@ -98,7 +98,26 @@ export const useCourseStore = create<CourseState>((set, get) => ({
             grade: 'B+'
         }
     ],
-    droppedCourses: [],
+    droppedCourses: [
+        {
+            id: '7',
+            courseCode: '10301214',
+            courseNameTH: 'การออกแบบและพัฒนาเกม',
+            courseNameEN: 'Game Design and Development',
+            credits: 3,
+            instructor: 'ดร.วิชาญ เกมเมอร์',
+            grade: 'B'
+        },
+        {
+            id: '8',
+            courseCode: '10301215',
+            courseNameTH: 'ปัญญาประดิษฐ์และการเรียนรู้ของเครื่อง',
+            courseNameEN: 'Artificial Intelligence and Machine Learning',
+            credits: 3,
+            instructor: 'ดร.ปัญญา ไอเอไอ',
+            grade: 'A'
+        }
+    ],
     
     addCourse: (course: Omit<Course, 'id'>) => set((state) => ({
         registeredCourses: [
