@@ -6,6 +6,7 @@ import { useTodoStore } from '../store/todoStore';
 const TodoList: React.FC = () => {
     const todos = useTodoStore((state) => state.todos);
     const deleteTodo = useTodoStore((state) => state.deleteTodo);
+    const toggleTodo = useTodoStore((state) => state.toggleTodo);
 
     if (todos.length === 0) {
         return (
@@ -21,7 +22,18 @@ const TodoList: React.FC = () => {
             <h3 style={{color: 'black'}}>รายการงาน ({todos.length} รายการ)</h3>
             {todos.map((todo) => (
                 <div key={todo.id} style={{margin: '5px 0', padding: '5px', border: '1px solid #ddd'}}>
-                    <span style={{color: 'black'}}>{todo.text}</span>
+                    <input 
+                        type="checkbox" 
+                        checked={todo.completed}
+                        onChange={() => toggleTodo(todo.id)}
+                        style={{marginRight: '8px'}}
+                    />
+                    <span style={{
+                        color: 'black',
+                        textDecoration: todo.completed ? 'line-through' : 'none'
+                    }}>
+                        {todo.text}
+                    </span>
                     <button 
                         onClick={() => deleteTodo(todo.id)}
                         style={{marginLeft: '10px', color: 'red'}}

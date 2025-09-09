@@ -8,7 +8,7 @@ const CourseForm: React.FC = () => {
         courseCode: '',
         courseNameTH: '',
         courseNameEN: '',
-        credits: 0,
+        credits: 3,
         instructor: '',
         grade: 'A'
     });
@@ -23,7 +23,7 @@ const CourseForm: React.FC = () => {
                 courseCode: '',
                 courseNameTH: '',
                 courseNameEN: '',
-                credits: 0,
+                credits: 3,
                 instructor: '',
                 grade: 'A'
             });
@@ -39,11 +39,11 @@ const CourseForm: React.FC = () => {
     };
 
     return (
-        <div className="course-form">
-            <h3>เพิ่มรายวิชา</h3>
+        <div style={{color: 'black', padding: '10px', border: '1px solid #ccc'}}>
+            <h3 style={{color: 'black'}}>เพิ่มรายวิชา</h3>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label>รหัสวิชา:</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>รหัสวิชา:</label>
                     <input
                         type="text"
                         name="courseCode"
@@ -51,11 +51,12 @@ const CourseForm: React.FC = () => {
                         onChange={handleChange}
                         placeholder="เช่น CS101"
                         required
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     />
                 </div>
                 
-                <div className="form-group">
-                    <label>ชื่อวิชา (ไทย):</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>ชื่อวิชา (ไทย):</label>
                     <input
                         type="text"
                         name="courseNameTH"
@@ -63,22 +64,25 @@ const CourseForm: React.FC = () => {
                         onChange={handleChange}
                         placeholder="ชื่อวิชาภาษาไทย"
                         required
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     />
                 </div>
                 
-                <div className="form-group">
-                    <label>ชื่อวิชา (อังกฤษ):</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>ชื่อวิชา (อังกฤษ):</label>
                     <input
                         type="text"
                         name="courseNameEN"
                         value={formData.courseNameEN}
                         onChange={handleChange}
                         placeholder="Course Name in English"
+                        required
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     />
                 </div>
                 
-                <div className="form-group">
-                    <label>หน่วยกิต:</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>หน่วยกิต:</label>
                     <input
                         type="number"
                         name="credits"
@@ -87,39 +91,53 @@ const CourseForm: React.FC = () => {
                         min="1"
                         max="6"
                         required
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     />
                 </div>
                 
-                <div className="form-group">
-                    <label>อาจารย์ผู้สอน:</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>ชื่ออาจารย์ผู้สอน:</label>
                     <input
                         type="text"
                         name="instructor"
                         value={formData.instructor}
                         onChange={handleChange}
                         placeholder="ชื่ออาจารย์"
+                        required
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     />
                 </div>
                 
-                <div className="form-group">
-                    <label>เกรด:</label>
+                <div style={{margin: '10px 0'}}>
+                    <label style={{color: 'black', display: 'block', marginBottom: '5px'}}>เกรด:</label>
                     <select
                         name="grade"
                         value={formData.grade}
                         onChange={handleChange}
+                        style={{width: '100%', padding: '5px', border: '1px solid #ccc'}}
                     >
-                        <option value="A">A</option>
-                        <option value="B+">B+</option>
-                        <option value="B">B</option>
-                        <option value="C+">C+</option>
-                        <option value="C">C</option>
-                        <option value="D+">D+</option>
-                        <option value="D">D</option>
-                        <option value="F">F</option>
+                        <option value="A">A (4.0)</option>
+                        <option value="B+">B+ (3.5)</option>
+                        <option value="B">B (3.0)</option>
+                        <option value="C+">C+ (2.5)</option>
+                        <option value="C">C (2.0)</option>
+                        <option value="D+">D+ (1.5)</option>
+                        <option value="D">D (1.0)</option>
+                        <option value="F">F (0.0)</option>
                     </select>
                 </div>
                 
-                <button type="submit" className="submit-button">
+                <button 
+                    type="submit" 
+                    style={{
+                        background: '#4CAF50',
+                        color: 'white',
+                        padding: '10px 20px',
+                        border: 'none',
+                        borderRadius: '5px',
+                        cursor: 'pointer'
+                    }}
+                >
                     เพิ่มรายวิชา
                 </button>
             </form>

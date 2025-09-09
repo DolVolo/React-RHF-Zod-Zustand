@@ -6,9 +6,9 @@ import TodoAdd from './component/TodoAdd'
 import TodoList from './component/TodoList'
 // import TodoManager from './component/TodoManager'
 
-// Course Registration Components (temporarily disabled)
-// import CourseForm from './component/CourseForm'
-// import CourseList from './component/CourseList'
+// Course Registration Components (testing step by step)
+import CourseForm from './component/CourseForm'
+import CourseList from './component/CourseList'
 // import CourseDrop from './component/CourseDrop'
 
 // Counter Components (เดิม)
@@ -29,12 +29,6 @@ function App() {
 
         <main className="app-main" style={{maxWidth: '1200px', margin: '0 auto', padding: '20px'}}>
           
-          {/* Test: Simple content first */}
-          <div style={{padding: '20px', background: 'white', marginBottom: '20px', borderRadius: '10px'}}>
-            <h2 style={{color: 'black'}}>🧪 Testing - This should be visible</h2>
-            <p style={{color: 'black'}}>If you can see this, the basic structure works!</p>
-          </div>
-
           {/* 1. Counter System - Test this first */}
           <section style={{marginBottom: '40px', padding: '20px', background: 'lightblue', borderRadius: '10px'}}>
             <h2 style={{color: 'black', marginBottom: '20px'}}>1. ระบบ Counter (Zustand State Management)</h2>
@@ -63,12 +57,20 @@ function App() {
             </div>
           </section>
 
-          {/* 3. Course Registration System - Commented out to test */}
+          {/* 3. Course Registration System - Testing CourseForm + CourseList */}
           <section style={{marginBottom: '40px', padding: '20px', background: 'lightyellow', borderRadius: '10px'}}>
             <h2 style={{color: 'black', marginBottom: '20px'}}>3. ระบบการถอนรายวิชา (Course Registration & Withdrawal)</h2>
             <div style={{background: 'white', padding: '20px', borderRadius: '10px', color: 'black'}}>
-              <p style={{color: 'black'}}>Course system temporarily disabled for testing</p>
-              {/* Course components temporarily commented out */}
+              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px'}}>
+                <div>
+                  <h3 style={{color: 'black', marginBottom: '15px'}}>เพิ่มรายวิชา</h3>
+                  <CourseForm />
+                </div>
+                <div>
+                  <h3 style={{color: 'black', marginBottom: '15px'}}>รายวิชาที่ลงทะเบียน</h3>
+                  <CourseList />
+                </div>
+              </div>
             </div>
           </section>
 
