@@ -24,7 +24,6 @@ function App() {
       <div className="app">
         <header className="app-header">
           <h1>Assignment: Counter, TodoList & Course Registration System</h1>
-          <p style={{color: 'white', margin: '10px 0'}}>All Systems in One Page (ตามลำดับ)</p>
         </header>
 
         <main className="app-main" style={{maxWidth: '1200px', margin: '0 auto', padding: '20px'}}>
@@ -51,7 +50,6 @@ function App() {
                 <div>
                   <h3 style={{color: 'black', marginBottom: '15px'}}>รายการ Todo</h3>
                   <TodoList />
-                  <p style={{color: 'black', marginTop: '10px'}}>If you can see the todo list above, TodoList works!</p>
                 </div>
               </div>
             </div>
