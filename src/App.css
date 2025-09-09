@@ -1,0 +1,479 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Counter Styles */
+.counter-section h2 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.counter-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* TodoList Styles */
+.todo-section h2 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.todo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.todo-left, .todo-right {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-add h3, .todo-manager h3, .todo-list h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.add-button, .clear-button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.add-button:hover, .clear-button:hover {
+  background: #5a67d8;
+}
+
+.todo-items {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: #f7fafc;
+  transform: translateY(-1px);
+}
+
+.todo-item.completed {
+  background: #f0fff4;
+  border-color: #9ae6b4;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.todo-date {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #fed7d7;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background: #f7fafc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.stat-value.pending {
+  color: #ed8936;
+}
+
+.stat-value.completed {
+  color: #38a169;
+}
+
+.empty-message {
+  text-align: center;
+  color: #718096;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Course Registration Styles */
+.course-section h2 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.course-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-left, .course-right {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-form h3, .course-list h3, .course-drop h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #5a67d8;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  display: flex;
+  gap: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.course-table, .dropped-course-table {
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 100px 2fr 80px 150px 60px 100px;
+  background: #f7fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.table-header > div {
+  padding: 1rem 0.5rem;
+  border-right: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.table-header > div:last-child {
+  border-right: none;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 100px 2fr 80px 150px 60px 100px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.3s ease;
+}
+
+.table-row:hover {
+  background: #f7fafc;
+}
+
+.table-row.dropped {
+  background: #fffaf0;
+  opacity: 0.8;
+}
+
+.table-row > div {
+  padding: 1rem 0.5rem;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.table-row > div:last-child {
+  border-right: none;
+}
+
+.course-code {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.course-name {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
+.name-th {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.name-en {
+  font-size: 0.875rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.credits {
+  font-weight: 600;
+}
+
+.instructor {
+  color: #4a5568;
+}
+
+.grade {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 3px;
+  color: white;
+}
+
+.grade-A { background: #38a169; }
+.grade-Bplus { background: #48bb78; }
+.grade-B { background: #68d391; }
+.grade-Cplus { background: #ed8936; }
+.grade-C { background: #f6ad55; }
+.grade-Dplus { background: #e53e3e; }
+.grade-D { background: #fc8181; }
+.grade-F { background: #742a2a; }
+
+.drop-button, .restore-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.drop-button {
+  background: #e53e3e;
+  color: white;
+}
+
+.drop-button:hover {
+  background: #c53030;
+  transform: translateY(-1px);
+}
+
+.restore-button {
+  background: #38a169;
+  color: white;
+}
+
+.restore-button:hover {
+  background: #2f855a;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-container, .course-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-header, .table-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  
+  .table-header > div, .table-row > div {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    width: 80%;
+    max-width: 300px;
+  }
+}
