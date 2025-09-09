@@ -4,12 +4,12 @@ import './App.css'
 // TodoList Components
 import TodoAdd from './component/TodoAdd'
 import TodoList from './component/TodoList'
-import TodoManager from './component/TodoManager'
+// import TodoManager from './component/TodoManager'
 
-// Course Registration Components
-import CourseForm from './component/CourseForm'
-import CourseList from './component/CourseList'
-import CourseDrop from './component/CourseDrop'
+// Course Registration Components (temporarily disabled)
+// import CourseForm from './component/CourseForm'
+// import CourseList from './component/CourseList'
+// import CourseDrop from './component/CourseDrop'
 
 // Counter Components (เดิม)
 import CounterDec from './component/CounterDec'
